@@ -1,5 +1,6 @@
 import mongoose from "mongoose"
 
 const connectDB = async () =>{
-    mongoose.connect(process.env.MONGODB_URL!)
+    return mongoose.connect("mongodb+srv://abanerjee:souvik2001@cluster0.vjzja.mongodb.net/url")
 }
+export default connectDB
