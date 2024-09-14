@@ -19,8 +19,12 @@ export  default class URLShortenerService {
     }
     async getAllUrls(){
         return await this.URLRepository.getAllUrls();
+    } 
+    async getUrlById(id:string){
+        return await this.URLRepository.getURLByID(id);
     }
     async getURLByShortUrl(shortUrl:string){
         return await this.URLRepository.getURLByShortUrl(shortUrl)
     }
+   
 }

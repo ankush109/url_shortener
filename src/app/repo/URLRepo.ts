@@ -7,7 +7,7 @@ export default class URLRepo {
         this.urlmodel=Url
     }
    async getURLByID(id:string):Promise<IUrl | null>{
-       return await this.urlmodel.findById(id).lean()
+       return await this.urlmodel.findOne({shortUrl:id}).lean()
     }
    async getURLByShortUrl(shortUrl:string):Promise<IUrl | null>{
        return await this.urlmodel.findOne({
